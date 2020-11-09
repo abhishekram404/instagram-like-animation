@@ -1,0 +1,57 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .img-cont {
+  height: 450px;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart-cont {
+  position: absolute;
+  display: flex;
+  transform-origin: center;
+  transform: scale(0);
+  pointer-events: none;
+}
+.heart {
+  width: 55px;
+  height: 70px;
+  background-color: #e2e2e2;
+  border-radius: 50% 50% 0px 0px;
+}
+.heart-left {
+  transform: rotate(-50deg) translateX(28px);
+}
+.heart-right {
+  transform: rotate(50deg) translateX(-28px);
+}
+
+.animate {
+  animation: animate 1s ease-in-out;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(0);
+  }
+}
